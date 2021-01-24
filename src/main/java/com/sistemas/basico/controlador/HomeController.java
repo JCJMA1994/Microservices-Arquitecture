@@ -1,7 +1,10 @@
 package com.sistemas.basico.controlador; 
 
 import org.springframework.stereotype.Controller;
-@Controller 
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
 public class HomeController { 
 
 		@GetMapping({"/","/index"})
