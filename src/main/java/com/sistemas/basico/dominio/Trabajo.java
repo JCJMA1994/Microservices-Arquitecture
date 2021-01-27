@@ -4,7 +4,10 @@ import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
 import java.util.Date;
 import java.util.List;
 
@@ -37,12 +40,16 @@ public class Trabajo {
 
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date fechaTrabajo;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date fechaEntrega;
 
     @Positive
     private Double costo;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "trabajo")
-    public List<Tarea> tareas;
+    public List<Tarea> tarea;
 
 }

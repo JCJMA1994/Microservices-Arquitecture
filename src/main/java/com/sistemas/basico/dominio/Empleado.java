@@ -38,7 +38,7 @@ public class Empleado {
     private String celular;
 
 
-    @Column(length = 8)
+    @Column(length = 80)
     @Email(message = "Debe ingresar un EMAIL valido")
     private String email;
 

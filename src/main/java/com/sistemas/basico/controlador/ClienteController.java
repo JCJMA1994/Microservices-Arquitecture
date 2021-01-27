@@ -120,7 +120,7 @@ public class ClienteController {
             @PathVariable("id") Long id,
             Model model) {
         Trabajo trabajo = trabajoService.buscar(id);
-        List<Tarea> tareas = trabajo.getTareas();
+        List<Tarea> tareas = trabajo.getTarea();
         Collections.sort(tareas, (x, y) -> x.getId().compareTo(y.getId()));
 
         model.addAttribute("trabajo", trabajo);
