@@ -61,7 +61,7 @@
                         <option th:each="sempleado : ${listaEmpleado}"
                                 th:value="${empleado.id}"
                                 th:text="${empleado.apellido}+','+${sempleado.nombre}"
-                                th:selected="${sempleado.id}==*{empleadi.id}"></option>
+                                th:selected="${sempleado.id}==*{empleado.id}"></option>
                     </select>
                     <span class="help-block" th:if="${#fields.hasErrors('etapa.id')}">
                         <small th:errors="*{etapa.id}" class="text-danger">Empleado error</small>
