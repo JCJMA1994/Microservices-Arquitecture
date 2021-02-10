@@ -5,6 +5,7 @@ import com.sistemas.basico.servicio.EtapaService;
 import com.sistemas.basico.dominio.Etapa;
 import com.sistemas.basico.repositorio.EtapaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,7 +26,9 @@ public class EtapaServiceImpl implements EtapaService{
 
     @Override
     public List<Etapa> listarTodos() {
-        return etapaRepository.findAll();
+        List<Etapa> result = etapaRepository.findAll(Sort.by(Sort.Direction.ASC,"id"));
+
+        return result;
     }
 
     @Override
@@ -43,7 +46,6 @@ public class EtapaServiceImpl implements EtapaService{
     @Override
     public Etapa actualizar(Etapa entidad) {
         Etapa result;
-
         result = etapaRepository.saveAndFlush(entidad);
         return result;
     }

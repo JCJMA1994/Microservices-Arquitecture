@@ -51,7 +51,7 @@ public class TareaController {
 	else { 
 		model. addAttribute("tarea", new Tarea()); 
 	}
-	
+	model.addAttribute("listaEmpleado", empleadoService.listarTodos());
 	return "/tarea/tareaForm";
 	}
 	

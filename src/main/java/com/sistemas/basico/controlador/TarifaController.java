@@ -20,7 +20,7 @@ public class TarifaController {
 	public String getIndex(Model model) { 
 	model.addAttribute("listaTarifas", tarifaService.listarTodos());
 	
-	return "/tarifa/tarifalndex" ; 
+	return "/tarifa/tarifaIndex" ;
 	}
 	@GetMapping("/nuevo")
 	public String getTarifaFormNew(Model model) { 
@@ -74,7 +74,7 @@ public class TarifaController {
 			return "redirect:/tarifa/index"; 
 		}
 	@GetMapping("/eliminar/{id}")
-	public String getTarifaEliminar( 
+	public String getTarifaEliminar(
 			@PathVariable("id") Long id, 
 			Model model) { 
 

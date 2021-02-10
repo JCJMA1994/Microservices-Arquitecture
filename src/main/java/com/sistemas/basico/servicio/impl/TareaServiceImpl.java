@@ -1,9 +1,11 @@
 package com.sistemas.basico.servicio.impl;
 
+import com.sistemas.basico.dominio.Etapa;
 import com.sistemas.basico.dominio.Tarea;
 import com.sistemas.basico.repositorio.TareaRepository;
 import com.sistemas.basico.servicio.TareaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,7 +26,9 @@ public class TareaServiceImpl implements TareaService {
 
     @Override
     public List<Tarea> listarTodos() {
-        return tareaRepository.findAll();
+        List<Tarea> result = tareaRepository.findAll(Sort.by(Sort.Direction.ASC,"id"));
+
+        return result;
     }
 
     @Override

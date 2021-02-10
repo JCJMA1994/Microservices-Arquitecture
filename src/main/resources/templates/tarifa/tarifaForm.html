@@ -29,7 +29,8 @@
                 </div>
                 <div class="form-group">
                     <label for="inputDescripcion">Descripcion:</label>
-                    <input type="text" class="form-control disabled" id="inputDescripcion" placeholder="Ingrese Descripcion "
+                    <input type="text" class="form-control disabled" id="inputDescripcion"
+                           placeholder="Ingrese Descripcion "
                            th:class="${#fields.hasErrors('descripcion')}? 'form-control alert-danger' : 'form-control'"
                            th:field="*{descripcion}" th:value="*{descripcion}">
                     <span class="help-block" th:if="${#fields.hasErrors('descripcion')}">

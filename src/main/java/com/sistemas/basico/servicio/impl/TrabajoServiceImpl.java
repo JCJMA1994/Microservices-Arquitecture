@@ -1,9 +1,11 @@
 package com.sistemas.basico.servicio.impl;
 
+import com.sistemas.basico.dominio.Etapa;
 import com.sistemas.basico.dominio.Trabajo;
 import com.sistemas.basico.repositorio.TrabajoRepository;
 import com.sistemas.basico.servicio.TrabajoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,7 +27,9 @@ public class TrabajoServiceImpl implements TrabajoService {
 
     @Override
     public List<Trabajo> listarTodos(){
-        return trabajoRepository.findAll();
+        List<Trabajo> result = trabajoRepository.findAll(Sort.by(Sort.Direction.ASC,"id"));
+
+        return result;
     }
 
     @Override

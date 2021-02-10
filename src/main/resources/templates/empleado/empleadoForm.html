@@ -57,7 +57,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputfechaNacimiento">fecha Nacimiento:</label>
-                    <input type="date"  id="inputfechaNacimiento"
+                    <input type="date" id="inputfechaNacimiento"
                            placeholder="Ingrese fechaNacimiento"
                            th:class="${#fields.hasErrors('fechaNacimiento')}? 'form-control alert-danger' : 'form-control'"
                            th:fields="*{fechaNacimiento}" th:value="*{fechaNacimiento}">
@@ -85,7 +85,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputfechaIngreso">Fecha de Ingreso:</label>
-                    <input type="date"  id="inputfechaIngreso"
+                    <input type="date" id="inputfechaIngreso"
                            placeholder="Ingrese fechaIngreso"
                            th:class="${#fields.hasErrors('fechaIngreso')}? 'form-control alert-danger' : 'form-control'"
                            th:fields="*{fechaIngreso}" th:value="*{fechaIngreso}">

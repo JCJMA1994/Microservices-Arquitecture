@@ -18,7 +18,7 @@ public class EmpleadoController {
 
     @GetMapping({"/", "/index"})
     public String getIndex(Model model) {
-        model.addAttribute("listaEmp1eados", empleadoService.listarTodos());
+        model.addAttribute("listaEmpleados", empleadoService.listarTodos());
 
         return "/empleado/empleadoIndex";
     }

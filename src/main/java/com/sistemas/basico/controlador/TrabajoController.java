@@ -31,10 +31,10 @@ public class TrabajoController {
     private EtapaService etapaService;
 
     @GetMapping({"/", "index"})
-    public String getlndex(Model model) {
+    public String getIndex(Model model) {
         model.addAttribute("listaTrabajos", trabajoService.listarTodos());
 
-        return "/trabajo/trabajolndex";
+        return "/trabajo/trabajoIndex";
     }
 
     @GetMapping("/nuevo")
@@ -78,7 +78,7 @@ public class TrabajoController {
 		trabajo.setTarea(tareas);
 		trabajoService.agregar(trabajo);
 
-		return "redirect: /trabajo/index";
+		return "redirect:/trabajo/index";
 	}
    @GetMapping("/editar/{id}")
    public String getTrabajoFormEdit (

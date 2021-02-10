@@ -29,7 +29,8 @@
                 </div>
                 <div class="form-group">
                     <!-- <label for="inputApellido">Trabajo:</label>-->
-                    <input type="hidden" class="form-control disabled" id="inputTrabajoID" placeholder="Ingrese Trabajo "
+                    <input type="hidden" class="form-control disabled" id="inputTrabajoID"
+                           placeholder="Ingrese Trabajo "
                            th:class="${#fields.hasErrors('apellido')}? 'form-control alert-danger' : 'form-control'"
                            th:field="*{trabajo.id}" th:value="*{trabajo.id}">
                     <span class="help-block" th:if="${#fields.hasErrors('trabajo.id')}">
@@ -69,7 +70,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputfechaInicio">fecha Inicio:</label>
-                    <input type="text"  id="inputfechaInicio"
+                    <input type="text" id="inputfechaInicio"
                            th:class="${#fields.hasErrors('fechaInicio')}? 'form-control alert-danger' : 'form-control'"
                            th:fields="*{fechaInicio}" th:value="*{fechaInicio}" readonly>
                     <span class="help-block" th:if="${#fields.hasErrors('fechaInicio')}">
@@ -87,7 +88,8 @@
                 </div>
                 <br>
                 <button type="submit" class="btn btn-outline-primary">Aceptar</button>
-                <a th:href="@{/tarea/}+*{trabajo.id}+'/index'" class="btn btn-outline-secondary" role="button">Regresar</a>
+                <a th:href="@{/tarea/}+*{trabajo.id}+'/index'" class="btn btn-outline-secondary"
+                   role="button">Regresar</a>
             </form>
         </div>
     </div>
